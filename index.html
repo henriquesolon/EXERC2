@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Simples</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Meu Projeto com CSS e JS</h1>
+        <button id="messageButton">Clique aqui</button>
+        <p id="message" class="hidden">Olá, esta é uma mensagem exibida com JavaScript!</p>
+    </div>
+    <script src="scripts.js"></script>
+    <style>
+       body {
+        background-image: url('2015-02-20-gif.gif');
+    font-family: Arial, sans-serif;
+    background-image: url('2015-02-20-gif.gif');
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.gif-container{
+    width: 300px;
+    height: 200px;
+    background-image: url('2015-02-20-gif.gif');
+
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background-color: #007BFF;
+    color: white;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+ 
+    </style>
+    <script>
+      document.getElementById('messageButton').addEventListener('click', function() {
+    var messageParagraph = document.getElementById('message');
+    if (messageParagraph.classList.contains('hidden')) {
+        messageParagraph.classList.remove('hidden');
+    } else {
+        messageParagraph.classList.add('hidden');
+    }
+});
+  
+    </script>
+</body>
+</html>
